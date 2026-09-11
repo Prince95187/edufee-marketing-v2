@@ -1649,32 +1649,36 @@ export default function MarketingPage() {
                 name: 'Prince',
                 role: 'Co-Founder & Technology',
                 img: '/team-prince.jpg',
+                objectPos: 'center top',
                 delay: 0,
               },
               {
                 name: 'Keshav',
                 role: 'Co-Founder & Technology',
                 img: '/team-keshav.png',
+                objectPos: 'center 15%',
                 delay: 0.1,
               },
               {
                 name: 'Revanth',
                 role: 'Co-Founder & Technology',
                 img: '/team-revanth.png',
+                objectPos: 'center 30%',
                 delay: 0.2,
               },
             ].map((member) => (
               <FadeUp key={member.name} delay={member.delay}>
                 <div className="flex flex-col items-center text-center group">
                   <div
-                    className="w-40 h-40 rounded-full overflow-hidden mb-5 ring-4 ring-[#0071E3]/10
+                    className="w-52 h-52 rounded-full overflow-hidden mb-5 ring-4 ring-[#0071E3]/10
                                 group-hover:ring-[#0071E3]/30 transition-all duration-300"
                     style={{ boxShadow: '0 12px 40px rgba(0,113,227,0.12)' }}
                   >
                     <img
                       src={member.img}
                       alt={member.name}
-                      className="w-full h-full object-cover object-top"
+                      className="w-full h-full object-cover"
+                      style={{ objectPosition: member.objectPos }}
                     />
                   </div>
                   <p className="text-[20px] font-black text-[#1D1D1F] tracking-[-0.025em] mb-1">
