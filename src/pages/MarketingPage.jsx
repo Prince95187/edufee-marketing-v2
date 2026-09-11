@@ -1624,6 +1624,72 @@ export default function MarketingPage() {
         </div>
       </section>
 
+      {/* ── Meet the Team ──────────────────────────────────────────────────── */}
+      <section className="py-28 bg-white">
+        <div className="max-w-[1080px] mx-auto px-5">
+          <FadeUp>
+            <p className="text-center text-[13px] font-semibold text-[#0071E3] tracking-[0.08em] uppercase mb-3">
+              The people behind EduFee
+            </p>
+            <h2
+              className="text-center text-[clamp(32px,5vw,56px)] font-black text-[#1D1D1F] tracking-[-0.04em] leading-[1.06] mb-4"
+              style={{ textWrap: 'balance' }}
+            >
+              Meet our founders
+            </h2>
+            <p className="text-center text-[16px] text-[#6E6E73] leading-relaxed max-w-xl mx-auto mb-16">
+              EduFee is built by a small, passionate team dedicated to transforming
+              how Indian schools manage fees, attendance, and communication.
+            </p>
+          </FadeUp>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+            {[
+              {
+                name: 'Prince',
+                role: 'Co-Founder & Technology',
+                img: '/team-prince.jpg',
+                delay: 0,
+              },
+              {
+                name: 'Keshav',
+                role: 'Co-Founder & Technology',
+                img: '/team-keshav.png',
+                delay: 0.1,
+              },
+              {
+                name: 'Revanth',
+                role: 'Co-Founder & Technology',
+                img: '/team-revanth.png',
+                delay: 0.2,
+              },
+            ].map((member) => (
+              <FadeUp key={member.name} delay={member.delay}>
+                <div className="flex flex-col items-center text-center group">
+                  <div
+                    className="w-40 h-40 rounded-full overflow-hidden mb-5 ring-4 ring-[#0071E3]/10
+                                group-hover:ring-[#0071E3]/30 transition-all duration-300"
+                    style={{ boxShadow: '0 12px 40px rgba(0,113,227,0.12)' }}
+                  >
+                    <img
+                      src={member.img}
+                      alt={member.name}
+                      className="w-full h-full object-cover object-top"
+                    />
+                  </div>
+                  <p className="text-[20px] font-black text-[#1D1D1F] tracking-[-0.025em] mb-1">
+                    {member.name}
+                  </p>
+                  <p className="text-[13px] font-semibold text-[#0071E3]">
+                    {member.role}
+                  </p>
+                </div>
+              </FadeUp>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── Footer ─────────────────────────────────────────────────────────── */}
       <footer className="bg-[#1D1D1F] py-16">
         <div className="max-w-[1080px] mx-auto px-5">
